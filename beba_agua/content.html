@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beba água</title>
+    <script src="notifications.js"></script>
+</head>
+<body>
+    setInterval(minhaNotificao, 60000)
+
+    function minhaNotificao() {
+    if (Notification.permission !== "granted") {
+        Notification.requestPermission();
+    }
+    else {
+        var notificacao = new Notification("Já bebeu água hoje?t", {
+            icon: 'sketch1630517055499.png', //img
+            body: 'Beba água'
+        });
+    
+        notificacao.onclick = function () {
+            window.open('http://google.com/'); //site
+        };
+    }
+    }
+    
+    minhaNotificao();
+
+    
+</body>
+</html>
