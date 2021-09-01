@@ -1,5 +1,5 @@
 let now = new Date()
-if(now.getHours()>=21){
+if(now.getHours()>=22){
 setInterval(beba_agua, 60000)
 }
 
